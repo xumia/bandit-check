@@ -21,6 +21,8 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  volumes:
+    - ${{ github.workspace }}:/github/workspace
   args:
     - ${{ inputs.path }}
     - ${{ inputs.bandit_flags }}
