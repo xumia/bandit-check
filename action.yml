@@ -20,7 +20,6 @@ outputs:
     description: 'The output of bandit'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
   volumes:
     - ${{ github.workspace }}:/github/workspace
   args:
